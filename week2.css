@@ -1,0 +1,185 @@
+*{
+    font-family: monospace, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: cornsilk;
+}
+header{
+    background-color: rgb(158, 157, 91);
+    height: 40%;
+    padding: 3em 20em;
+    width: 100%;
+}
+.firstH{
+    background-color: rgb(158, 157, 91);
+}
+nav{
+    display: flex;
+    padding: 0 20em;
+    margin: 1em;
+    font-size: bold;
+}
+nav ul li {
+    padding: 1em;
+    display: inline-block;
+}
+nav ul li a {
+    display: inline;
+    text-decoration: none;
+    color: black;
+    width:3em;
+    height: 2em;
+    align-items: center;
+    font-weight: 500;
+    padding: 1em;
+}
+ nav ul li a :hover{
+    cursor: pointer;
+    transition: 0.5s;
+    color: rgb(2, 73, 20);
+}
+.main-pic{
+    width:100%;
+    height: 30%;
+    overflow: hidden;
+}
+.flexbox-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction:column;
+    margin: 2em;
+    width: 50%;
+    padding:1em;
+}
+ .head-left{
+     display: inline;
+     width: 35%;
+     height: auto;
+     margin: 0em 0em 0em 18em;
+     
+ }
+ .content-left{
+    display:inline;
+    height: auto;
+    width: 35%;
+    margin-left: 18em;
+}
+.head-right{
+    display: flex;
+    height: auto;
+    width:50%;
+    margin-left:50em;
+    padding: 0em;
+    margin-top: 0em;
+}
+.content-right{
+    display: flex;
+    width: 50%;
+    height: auto;
+    margin-left: 50em;
+}
+h5{
+    display: inline;
+    width:30%;
+    margin: 2em;
+    padding: 0em;
+}
+.gallerY{
+display: inline;
+flex-direction:row;
+padding: 0em;
+margin: 1em;
+width: 30%;
+}
+h2{
+    display: inline;
+    flex-direction:row;
+    width:50;
+    margin-left:30em;
+}
+.flexbox-container-2{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    margin-top:20px;
+    margin-left:40em;
+    width: 50%;
+    height: auto;
+}
+.icon{
+    width:15%;
+    margin-left:8%;
+}
+.icon img{
+    width:100%;
+}
+.left-text{
+    font-size:13px;
+}
+.list-wrapper{
+    margin-right:0em;
+    padding: 0em;
+}
+.mAp{
+    margin-top: 0em;
+    margin-left: 0em;
+}
+.livemap{
+    display: flex;
+    
+}
+li{
+    text-decoration: none;
+}
+footer{
+    background-color: rgb(236, 136, 43);
+    color:white;
+    display:flex;
+    justify-content: space-around;
+    min-height:420px;
+    padding: 1.5em;
+    flex-direction: row;
+    margin-top: 10em;
+}
+.naviGation{
+    display: inline;
+    width: 10%;
+    height: auto;
+}
+.naviGation li a {
+    text-decoration: none;
+}
+.arcHives{
+    display: inline;
+    width: 10%;
+    height: auto;
+}
+.arcHives li a{
+    text-decoration: none;
+}
+.abOut{
+    display: inline;
+    width: 10%;
+    height: auto;
+}
+.abOut li a{
+    text-decoration: none;
+}
+@media  screen and (max-width: 823px) {
+    header {
+        display: flex;
+        padding: 10px 10px 20px 5px;
+        flex-direction: column;
+    }
+    footer{
+        flex-wrap: wrap;
+    }
+    footer div{
+        width:45%;
+    }
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+      padding: 2em 4em;
+    }
