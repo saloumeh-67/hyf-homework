@@ -9,7 +9,7 @@ housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 if(housePrice > houseCost) {
    console.log( "peter did paye too much");
 }
-else (housePrice < houseCost){
+else (housePrice < houseCost);{
     console.log ("peter did paye less");
 }
 //Julia house cost
@@ -24,6 +24,6 @@ housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 if(housePrice > houseCost){
     console.log("Julia did pay a lot ");
 }
-else( housePrice < houseCost){
+else( housePrice < houseCost);{
     console.log("Julia did buy good ");
 }
