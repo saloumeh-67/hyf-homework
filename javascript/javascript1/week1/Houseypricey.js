@@ -9,5 +9,5 @@ if(housePrice > houseCost) {
     peter did paye too much 
 }
 else (housePrice < houseCost) {
-    peter did paye fair 
+    peter did paye less 
 }
