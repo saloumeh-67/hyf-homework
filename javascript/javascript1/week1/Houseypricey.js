@@ -3,7 +3,7 @@ var houseWidth = 8;
 var houseDepth = 10; 
 var houseHeight = 10;
 var gardenSize = 100;
-var houseCost = 2.500000;
+var houseCost = 2500000;
 var volumeInMeters = houseWidth * houseDepth * houseHeight;
 housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 if(housePrice > houseCost) {
@@ -18,7 +18,7 @@ var houseWidth = 5;
 var houseDepth = 11; 
 var houseHeight = 8;
 var gardenSize = 70;
-var houseCost = 1.000000;
+var houseCost = 1000000;
 var volumeInMeters = houseWidth * houseDepth * houseHeight;
 housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 if(housePrice > houseCost){
