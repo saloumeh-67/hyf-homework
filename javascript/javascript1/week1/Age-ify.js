@@ -1,5 +1,5 @@
 console.log("Age-ify!");
-var yearOfBirth = 1988;
-var yearFuture = 2080;
-var age = yearFuture - yearOfBirth;
+const yearOfBirth = 1988;
+const yearFuture = 2080;
+const age = yearFuture - yearOfBirth;
 console.log("you'r going to be " + " " + age + " at this year" + yearFuture + ".");
