@@ -1,5 +1,4 @@
-const WeatherDressCode = temperature(18); 
-function WeatherDressCode (tempearature){
+ function WeatherDressCode(tempearature){
     if (tempearature < 18) {
         console.log("wear jacket");
     }
