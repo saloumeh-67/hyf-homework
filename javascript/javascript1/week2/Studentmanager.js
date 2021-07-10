@@ -11,7 +11,7 @@ function addStudentToClass(studentName) {
 console.log(class07Students); 
 
     function getNumberOfStudents() {
-        let totalNumberOfStudents = class07Students.length;
+        const totalNumberOfStudents = class07Students.length;
         return totalNumberOfStudents;}
     
 
