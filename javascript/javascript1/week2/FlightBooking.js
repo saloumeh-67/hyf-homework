@@ -7,11 +7,11 @@ let fullname1 = getFullname;
 let fullname2 = getFullname;
 console.log("saloumeh sarabi,farzad soleimani");
 
-var gender = prompt('are you lord or princess')
+const gender = prompt('are you lord or princess')
 if (gender === 'lord') {
-  console.log(getFullname(' lord',' farzad', " soleimani ",))
+  console.log(getFullname(' lord',' ',' ',))
 } else {
-  console.log(getFullname('princess', ' saloumeh', " sarabi "))
+  console.log(getFullname('princess', ' ', ' '))
 }
 
 function useFormalName(gender, getFullname ) {
