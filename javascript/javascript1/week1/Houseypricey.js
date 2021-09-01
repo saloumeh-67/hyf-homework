@@ -1,25 +1,25 @@
 //peter house cost 
-var houseWidth = 8; 
-var houseDepth = 10; 
-var houseHeight = 10;
-var gardenSize = 100;
-var houseCost = 2500000;
-var volumeInMeters = houseWidth * houseDepth * houseHeight;
-housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
+let houseWidth = 8; 
+let houseDepth = 10; 
+let houseHeight = 10;
+let gardenSizeInM = 100;
+let houseCost = 2500000;
+let volumeInMeters = houseWidth * houseDepth * houseHeight;
+const housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 if(housePrice > houseCost) {
-   console.log( "peter did paye too much");
+   console.log( "peter did pay too much");
 }
 else (housePrice < houseCost);{
-    console.log ("peter did paye less");
+    console.log ("peter did pay less");
 }
 //Julia house cost
 
-var houseWidth = 5; 
-var houseDepth = 11; 
-var houseHeight = 8;
-var gardenSize = 70;
-var houseCost = 1000000;
-var volumeInMeters = houseWidth * houseDepth * houseHeight;
+ houseWidth = 5; 
+ houseDepth = 11; 
+ houseHeight = 8;
+ gardenSizeInM = 70;
+ houseCost = 1000000;
+ volumeInMeters = houseWidth * houseDepth * houseHeight;
 housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 if(housePrice > houseCost){
     console.log("Julia did pay a lot ");
