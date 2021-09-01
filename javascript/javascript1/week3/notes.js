@@ -20,14 +20,14 @@ let result;
             result = notes[i];
             break;
         } 
-        else if ((id === " ") || (id.typeof !== "number")) 
+        else if ((id === " ") || (typeof id !== "number")) 
         {
             result = "invalid id";
         }
     }
     return result;
 }
-firstNote = getNote(1);
+const firstNote = getNote(1);
 console.log(firstNote); 
 console.log(getNote(2));
 console.log(getNote(""));

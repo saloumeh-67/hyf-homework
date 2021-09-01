@@ -18,7 +18,7 @@ const seriesDurations = [
       minutes: 58,
     },
   ];
-  function countHoursOfwatching() {
+  function countHoursOfWatching() {
     let sumOfTheTotalTime;
     for (let i = 0; i < seriesDurations.length; i++) {
         let currentDuration = 0;
@@ -26,7 +26,7 @@ const seriesDurations = [
         averageLife = convertYearsToMinutes(seriesDurations[i].years);
         currentDuration += (convertHoursToMinutes(seriesDurations[i].hours));
         currentDuration += (convertDaysToMinutes(seriesDurations[i].days));
-        timeWastedInPercentage = (currentDuration / averageLife) * 100;
+        const timeWastedInPercentage = (currentDuration / averageLife) * 100;
         console.log(`${seriesDurations[i].title} took ${parseFloat(timeWastedInPercentage).toFixed(4)}% of my life`);
         sumOfTheTotalTime += timeWastedInPercentage;
         console.log(currentDuration);
