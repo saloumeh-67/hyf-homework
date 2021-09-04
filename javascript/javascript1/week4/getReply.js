@@ -3,33 +3,35 @@ let todo = [];
 function getReply(command) {
   //'ask for name.'
   const array = command.split(" ");
+  const commandLowerCase = command.toLowerCase();
   let response = " ";
-  if (command.includes("hello my name is ")) {
+  if  (commandLowerCase.includes('hello my name is ')) {
     userName = array[array.length - 1];
     return "Nice to meet you " + userName;
-  } else if (command.includes("what is my name")) {
+  } else if (commandLowerCase.includes("what is my name")) {
     return "your name is " + userName;
-  } else if (command.includes() {
+  } else if (commandLowerCase.includes()) {
     return "your name is not find";
   }
   //'adding to todos.'
-  else if (command.includes("add ") && command.includes(" to my todos")) {
+  else if (commandLowerCase.includes("add ") && commandLowerCase.includes(" to my todos")) {
+    todo = command[command.length - 1];
     todo.push("fishing");
-    todo = command(command.length - 1);
     return "fishing is added to your todos";
-  } else if (command.includes("add signging")) {
-    todo.push("signging");
-  } else if (command.includes("remove fishing")) {
+  } else if (commandLowerCase.includes("add singing")) {
+     todo.push("singing");
+     return "singing is added to your todos";
+  } else if (commandLowerCase.includes("remove fishing")) {
     for (let i = 0; i < todo.length; i++) {
       if (todo[i].includes("fishing")) {
         todo.splice(i, 1);
-        return "removed fishing from your todo";
+        return "removed fishing from your todos";
       }
     }
   }
-  else if(command.includes("on my todo"))
+  else if(command.includes("on my todos"))
     {
-        return(todo);
+        return(todos);
     }
   else if (command.includes("is it today?")) {
     const monthNames = [
@@ -49,7 +51,7 @@ function getReply(command) {
     const today = new Date();
     const dd = String(today.getDate()).padStart(2, "0");
     const yyyy = today.getFullYear();
-    console.log(`${dd}. of ${monthNames[today.getMonth()]} ${yyyy}`);
+    return (`${dd}. of ${monthNames[today.getMonth()]} ${yyyy}`);
   }
   else if (command.includes("What is")){
     const matharray = command.split(" ");
@@ -91,13 +93,13 @@ else if (command.includes("Set a timer"))
 
 console.log(getReply("hello my name is Benjamin")); // 'we should get nice to meet you Benjamin.'
 console.log(getReply("What is my name?")); // 'Your name is Benjmain.
-console.log(getReply("Add fishing to my todo")); // "fishing added to your todo"
+//console.log(getReply("Add fishing to my todos")); // "fishing added to your todo"
 console.log(getReply("Add singing in the shower to my todo")); // "singing added to your todo"
 console.log(getReply("Remove fishing from my todo")); //"Removed fishing from your todo"
 console.log(getReply("What is on my todo?")); //What is on my todo?
 console.log(getReply("What day is it today?")); // like 30. of August 2019
-//console.log(getReply("What is 23 + 3"));
-//console.log(getReply("What is 100 - 5"));
-//console.log(getReply("What is 100 * 2"));
-//console.log(getReply("What is 9 / 3"));
-//console.log(getReply("Set a timer for 1 minute"));
+console.log(getReply("What is 23 + 3"));
+console.log(getReply("What is 100 - 5"));
+console.log(getReply("What is 100 * 2"));
+console.log(getReply("What is 9 / 3"));
+console.log(getReply("Set a timer for 1 minute"));
