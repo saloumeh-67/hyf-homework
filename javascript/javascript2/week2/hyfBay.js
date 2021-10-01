@@ -2,7 +2,7 @@
 console.log('Script loaded');
 
 const products = getAvailableProducts();
-const productsUl = document.querySelector('section.products ul');
+const productsUl = document.querySelector('#list');
 console.log(productsUl);
 
 function renderProducts(products) {
@@ -30,19 +30,19 @@ const searchBar = document.getElementById('searchBar');
 searchBar.addEventListener('keydown', function () {
     const arr = products.filter(elm => {
         const arrNames = elm.name.toLowerCase();
-        return arrNames.includes(searchBar.value);
+        return arrNames.includes.toLowerCase(searchBar.value);
     });
-    const printResult = document.getElementById('filterList').innerText = ' ';
+    let printResult = document.getElementById('filterList').innerText = ' ';
     renderProducts(arr);
     return printResult;
 });
 const maxPrice = document.getElementById('maxPrice');
-//make function for max price
+
 maxPrice.addEventListener('keyup', function () {
     const maximumPrice = products.filter(item => {
         return item.price <= maxPrice.value;
     });
-    const printResult = document.getElementById('filterList').innerText = ' ';
+    printResult = document.getElementById('filterList').innerText = ' ';
     renderProducts(maximumPrice);
     return maximumPrice;
 });
@@ -54,7 +54,7 @@ minPrice.addEventListener('keyup', function () {
     const minimumPrice = products.filter(item => {
         return item.price >= minPrice.value;
     });
-    const printResult = document.getElementById('filterList').innerText = ' ';
+    printResult = document.getElementById('filterList').innerText = ' ';
     renderProducts(minimumPrice);
     return minimumPrice;
 });
