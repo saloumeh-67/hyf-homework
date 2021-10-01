@@ -8,8 +8,8 @@ function callString() {
   stringToLog(3, "hey,it's working");
 
    //////////button
-  const button=document.getElementById("#click");
-  document.addEventListener("click",()=>{
+  const button=document.getElementById("#delay5Sec");
+  document.addEventListener("delay5Sec",()=>{
     stringToLog(5,"you cliked 5 secound ago")
   });
 
@@ -29,10 +29,9 @@ function callString() {
   ///////////make button for finding user Location 
   function locationUser() {
 
-    const status = document.querySelector('#status');
-    const mapLink = document.querySelector('#map-link');
+    let status = document.querySelector('#status');
+    let mapLink = document.querySelector('#map-link');
     mapLink.href = '';
-    mapLink.textContent = '';
 
     function success(position) {
         const latitude = position.coords.latitude;

@@ -25,7 +25,7 @@ const print = function (e) {
         printS.innerText = counterS
     };
 };
-const game = function () {
+ function game () {
     pressKey.addEventListener('keydown', print);
     setTimeout(() => {
         if (counterL > counterS) {
@@ -40,14 +40,15 @@ const game = function () {
     }, 1000 * durationTime());
     let timeCounter = durationTime();
 
-    const timerPrint = function () {
+     function timerPrint () {
         console.log('start');
         if (timeCounter >= 0) {
             timer.innerHTML = timeCounter
             timeCounter--;
         }
-    }
-    button.addEventListener('click', game);
+    }  
+}
+button.addEventListener('click', game);
 
     /////restart function
     restart.addEventListener('click', restartGame);
@@ -58,5 +59,4 @@ const game = function () {
         printS.innerText = counterS;
         game();
     };
-}
     
