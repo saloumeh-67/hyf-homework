@@ -34,8 +34,8 @@ async function translateOneByOne() {
     console.log("Element blue has been moved");
     await moveElement(greenBox,greenPosition);
     console.log("Element green has been moved");
-  } catch {
-    console.log("Error!!");
+  } catch(error) {
+    console.log("error!!");
   }
 }
  translateOneByOne();
