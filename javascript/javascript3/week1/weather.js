@@ -16,7 +16,7 @@ const windSpeed = document.createElement('div')
 const clouds = document.createElement('div')
 const sunrise = document.createElement('div')
 const sunset = document.createElement('div')
-console.log(ApiKey);
+console.log(ApiKey)
 // Append elements
 main.appendChild(cityName)
 main.appendChild(temperature)
@@ -28,9 +28,9 @@ main.appendChild(sunrise)
 //google elemnents
 const searchElement = document.getElementById('map')
 const userLocation = document.getElementById('userLocation')
-const searchedCity = ''
-const latData = 0
-const lngData = 0
+const searchedCity = '';
+const latData = 0;
+const lngData = 0;
 
 // main function to get data from JSON
 const getWeather = function () {
@@ -45,12 +45,12 @@ const getWeather = function () {
                 if (response.ok) {
                     return response.json()
                 } else {
-                    message.style.visibility = 'visible'
-                    message.style.backgroundColor = 'red'
-                    message.innerText = 'Invalid city name'
+                    message.style.visibility = 'visible';
+                    message.style.backgroundColor = 'red';
+                    message.innerText = 'Invalid city name';
                 }
             })
-            .then(weatherData => readData(weatherData))
+            .then(weatherData => readData(weatherData));
     }
 }
 // get and print weather data on DOM
@@ -74,7 +74,7 @@ function readData(data) {
     // location variable and calling back map function 
     let latData = data.coord.lat
     let lngData = data.coord.lon
-    initMap(latData, lngData)
+    initMap(latData, lngData);
 }
 // Google map functions 
 function initMap(latitude, longitude) {
