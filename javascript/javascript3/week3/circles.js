@@ -45,8 +45,6 @@ function randomColor() {
   return randomColor;
 }
 randomColor();
-
-// it could be really nice to have some help on this part I couldn't really understand it I just copy from 'stackoverflow':(
     //////// Every 100ms create a new circle instance and draw that to the canvas.
    // generate a random size for EVERY circle 
 function manyCircles() {
