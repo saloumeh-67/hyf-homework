@@ -3,7 +3,7 @@ SELECT user.id,task.title, user.email
 FROM user, user_task, task WHERE
 user.email LIKE "%@spotify.com" AND
 user.id=user_task.user_id AND
-user_task.task_id=task.id;
+user_task.task_id=task.id; 
 --Get all the tasks for 'Donald Duck' with status 'Not started'
 /*SELECT column_name(s)
 FROM table1
@@ -17,7 +17,6 @@ JOIN status ON status_id=status.id
 -- filtering records based on more than one condition
 WHERE user.name='Donald Duck' AND
 status.name LIKE "Not started";
-
 --Get all the tasks for 'Maryrose Meadows' 
 --that were created in september (hint: month(created)=month_number)
 SELECT * from user_task
@@ -31,6 +30,3 @@ month(created) = 9;
 SELECT COUNT(id), month(created)
 FROM task 
 GROUP BY MONTH(created);
-
-
- 
