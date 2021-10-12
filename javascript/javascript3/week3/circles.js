@@ -45,37 +45,30 @@ function randomColor() {
   return randomColor;
 }
 randomColor();
+
     //////// Every 100ms create a new circle instance and draw that to the canvas.
    // generate a random size for EVERY circle 
 function manyCircles() {
-    function xHorizontalRandomPosition() {
+    function getRandomPosition() {
         const x = Math.floor(Math.random() * 1200);
-        return x
-    }
-    function yVerticalRandomPosition() {
         const y = Math.floor(Math.random() * 600);
-        return y
-    }
-    function radius() {
         const r = Math.floor(Math.random() * 100);
-        return r
     }
     setInterval(() => {
-        const randomCircles = new Circle(xHorizontalRandomPosition(),
-         yVerticalRandomPosition(), radius(), 0, 2 * Math.PI)
+        const getRandomCircles = new Circle(getRandomPosition(),
+         getRadius(), 0, 2 * Math.PI)
         randomCircles.draw()
     }, 100);
 }
-//manyCircles();
+manyCircles();
 //moving after curser
 myCanvas.addEventListener('mousemove',function myFunction(e) {
-    function radius() {
+    function getRandomRadius() {
         const r = Math.floor(Math.random() * 70);
         return r
     }
     let x = e.clientX;
     let y = e.clientY;
-    const randomCircles = new Circle(x, y, radius(), 0, 2 * Math.PI)
-    randomCircles.draw()
-  })
-
+    const getRandomCircles = new Circle(x, y, getRandomRadius(), 0, 2 * Math.PI)
+    getRandomCircles.draw()
+  });
