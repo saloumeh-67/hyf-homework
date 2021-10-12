@@ -1,14 +1,14 @@
 //Lets use the github api to see what repositories different users have.
 const repository = document.getElementById("userRepos");
 const names = ["JiuTak", "FlorentinaPetica", "NataliaS1994"];
-const url = [];
-//instead of writing 3 url we can use this
+const urlPromiseArray = [];
+//instead of writing 3 urlPromiseArray we can use this
 names.forEach((uName) =>
-  url.push(fetch(`https://api.github.com/search/repositories?q=user:${uName}`))
+  urlPromiseArray.push(fetch(`https://api.github.com/search/repositories?q=user:${uName}`))
 );
 
 let users = () => {
-  Promise.all(url)
+  Promise.all(urlPromiseArray)
 
     .then((responses) => {
       return Promise.all(responses.map((response) => response.json()));
