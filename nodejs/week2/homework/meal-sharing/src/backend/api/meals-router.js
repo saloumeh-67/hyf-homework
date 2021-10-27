@@ -31,9 +31,11 @@ router.get("/", async (request, response) => {
     console.log(limit);
     //Get meals that has a price smaller than maxPrice
     if (maxPrice) {
-      const cheapPrice = meals.filter((meal) => meal.price < parseInt(maxPrice));
+      const cheapPrice = meals.filter(
+        (meal) => meal.price < parseInt(maxPrice)
+      );
       response.json(cheapPrice);
-    } 
+    }
     //Get meals that partially match a title.
     if (title) {
       const titleToLowerCase = title.toLowerCase();
@@ -41,18 +43,19 @@ router.get("/", async (request, response) => {
         meal.title.toLowerCase().includes(titleToLowerCase)
       );
       response.json(foodTitle);
-    } 
+    }
     //Get meals that has been created after the date
-    if(createdAt){
-      const createdAfterDate = meals.filter((meal) => new Date(meal.createdAt) > new Date(createdAt));
+    if (createdAt) {
+      const createdAfterDate = meals.filter(
+        (meal) => new Date(meal.createdAt) > new Date(createdAt)
+      );
       response.json(createdAfterDate);
     }
     //Only specific number of meals
-    if(limit){
+    if (limit) {
       const limitMeals = meals.slice(0, limit);
-      response.json(limitMeals)
-    }
-    else {
+      response.json(limitMeals);
+    } else {
       return response.status(400).send(" Request Not found ");
     }
   } catch (error) {
