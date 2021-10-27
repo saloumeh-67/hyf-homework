@@ -1,9 +1,31 @@
 [
   {
     "id": 1,
-    "numberOfStars": 3,
+    "numberOfStars": 5,
     "content": "Best meal ever",
     "mealId": 1,
     "createdAt": 12345
+  },
+  {
+    "id": 2,
+    "numberOfStars": 2,
+    "content": "worst meal ever",
+    "mealId": 2,
+    "createdAt": 123123
+  },
+  {
+    "id": 3,
+    "numberOfStars": 4,
+    "content": "Good",
+    "mealId": 3,
+    "createdAt": 456456
+  },
+  {
+    "id": 4,
+    "numberOfStars": 5,
+    "content": "super Good",
+    "mealId": 4,
+    "createdAt": 789789
   }
+
 ]

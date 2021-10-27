@@ -6,5 +6,30 @@
         "description" : "A nice night out eating delicious indian food",
         "createdAt" : "2019/12/7 14:34",
         "price" : 67
+    },
+    {
+        "id" : 1,
+        "title" : "Turkish food in the summer",
+        "maxNumberOfGuests" : 5,
+        "description" : "A nice night out eating delicious Turkish food",
+        "createdAt" : "2019/09/7 21:00",
+        "price" : 150
+    },
+    {
+        "id" : 1,
+        "title" : "Lebanese food in the summer",
+        "maxNumberOfGuests" : 5,
+        "description" : "A nice night out eating delicious Lebanese food",
+        "createdAt" : "2019/10/8 14:00",
+        "price" : 90
+    },
+    {
+        "id" : 4,
+        "title" : " Rød grød med fløde",
+        "maxNumberOfGuests" : 5,
+        "description" : "A nice night out eating delicious Danish food Rød grød med fløde food",
+        "createdAt" : "2019/09/7 11:00",
+        "price" : 180
     }
+
 ]
