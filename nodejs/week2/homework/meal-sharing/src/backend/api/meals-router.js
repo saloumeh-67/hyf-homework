@@ -55,19 +55,14 @@ router.get("/", async (request, response) => {
     if (limit) {
       const limitMeals = meals.slice(0, limit);
       response.json(limitMeals);
+    }
+    //Respond with the json for all the meals
+    if (meals) {
+      console.log("in /api/meals");
+      response.send(meals);
     } else {
       return response.status(400).send(" Request Not found ");
     }
-  } catch (error) {
-    throw error;
-  }
-});
-
-//Respond with the json for all the meals
-router.get("/", async (request, response) => {
-  try {
-    console.log("in /api/meals");
-    response.send(meals);
   } catch (error) {
     throw error;
   }
