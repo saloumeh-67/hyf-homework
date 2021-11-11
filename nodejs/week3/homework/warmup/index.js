@@ -30,7 +30,7 @@ app.get("/Subtraction", (req, res) => {
   } else console.log(Subtraction);
   res.json(Subtraction);
 });
-app.post("/Division", async (req, res) => {
+app.get("/Division", async (req, res) => {
   const params = req.query;
   const values = Object.values(params).flat();
   const Division = values.reduce(
@@ -44,7 +44,7 @@ app.post("/Division", async (req, res) => {
 });
 app.post("/multiply", async (req, res) => {
   const params = req.query;
-  const values = Object.values(params).flat();
+  const values = queryObj.flat().map((values) => parseInt(values));
   const multiply = values.reduce(
     (firstParam, secondParam) => firstParam * secondParam
   );
