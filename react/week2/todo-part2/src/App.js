@@ -8,20 +8,21 @@ const Header = () => {
 const Timer = () => {
   const [count, setCount] = useState(0);
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setInterval(() => {
       setCount((timer) => timer + 1);
     }, 1000);
-  });
+    return () => clearInterval(timer);
+  }, []); // <---- for unmount[]
   return <h3>You have used {count} seconds on this website</h3>;
 };
 // component to check the todo array when it is empty render a message
-const CheckTodoArray = (props) => {
-  if (props.todoArray.length === 0) {
-    return <div> No Items </div>;
-  } else {
-    return null;
-  }
-};
+// const CheckTodoArray = (props) => {
+//   if (props.todoArray.length === 0) {
+//     return <div> No Items </div>;
+//   } else {
+//     return null;
+//   }
+// };
 // the main component for add and delete todo item
 const ListedTodo = () => {
   const [todoArray, setToDoArray] = useState(ToDos);
@@ -44,17 +45,9 @@ const ListedTodo = () => {
       });
     });
   };
-  // add todo button component execute creat new todo item by button
-  const AddTodoButton = () => {
-    return (
-      <div>
-        <button onClick={addTodo}>Add Todo</button>
-        <CheckTodoArray todoArray={todoArray} />
-      </div>
-    );
-  };
+  
   // Render toDos tasks it will render all tasks in toDos array and check toDos status  if it's done or not
-  const RenderTodoTasks = (props) => {
+  const RenderTodoItem = (props) => {
     const [status, setStatus] = useState(false);
     const [todoArray, setToDoArray] = useState(ToDos);
     console.log(todoArray);
@@ -70,6 +63,7 @@ const ListedTodo = () => {
         });
       });
     };
+   
     return (
       <div>
         <li>
@@ -98,14 +92,24 @@ const ListedTodo = () => {
       </div>
     );
   };
-
+ // add todo button component execute creat new todo item by button
+ const AddTodoButton = (addTodo) => {
+  return (
+    <div>
+      <button onChange={addTodo}>Add Todo</button>
+      <CheckTodoArray todoArray={todoArray} />
+    </div>
+  );
+};
   return (
     <div>
       <AddTodoButton />
       {todoArray.map((todo) => {
         return (
-          <div key={todo.id}>
-            <RenderTodoTasks todoItems={todo} />
+          <div >
+            <Component key={todo.id} />
+            <RenderTodoItem todoItems={todo} />
+            {todoArray.length === 0 && <div>No Items</div>}
           </div>
         );
       })}
