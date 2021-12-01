@@ -1,7 +1,6 @@
 import React from "react";
 import { useUser } from "./Context";
 
-
 function App() {
   const {
     userInput,
@@ -13,7 +12,7 @@ function App() {
     error,
     setError,
   } = useUser();
-  console.log("Context",useUser);
+  console.log("Context", useUser);
   console.log(data);
   return (
     <div>
@@ -22,17 +21,21 @@ function App() {
         onChange={(e) => setUserInput(e.target.value)}
         type="text"
         placeholder="start search"
-        value = {userInput}
+        value={userInput}
       ></input>
       <ul>
-              {loading ? (  <li>Loading...</li>) :
-                 (data.map((user) => {         
-                      return (           
-                           <li key={user.id}>             
-                            {user.login} <a href={user.html_url}>{user.html_url}</a>         
-                   </li>         
-                    )       
-                      }))};
+        {loading ? (
+          <li>Loading...</li>
+        ) : (
+          data.map((user) => {
+            return (
+              <li key={user.id}>
+                {user.login} <a href={user.html_url}>{user.html_url}</a>
+              </li>
+            );
+          })
+        )}
+        ;
       </ul>
     </div>
   );
