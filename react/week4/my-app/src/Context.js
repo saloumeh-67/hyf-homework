@@ -3,44 +3,52 @@ import React, { useState, useEffect } from "react";
 const Context = React.createContext();
 
 function ContextProvider({ children }) {
-
-  const [userInput,setUserInput] = useState("");
+  const [userInput, setUserInput] = useState("");
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-const fetchGitUsers = async (input) => {
-  try {
-    await fetch(`https://api.github.com/search/users?q=${input}`)
-      .then((response) => {
-        if (!response.ok) {
-          throw Error("Could not fetch the data ");
-        } else {
-          return response.json();
-        }
-      })
-      .then((data) => {
-        setData(data.items);
-        //console.log(data);
-        setLoading(false);
-      });
-  } catch (error) {
-    setError(error.message);
-  }
-};
+  const fetchGitUsers = async (input) => {
+    try {
+      await fetch(`https://api.github.com/search/users?q=${input}`)
+        .then((response) => {
+          if (!response.ok) {
+            throw Error("Could not fetch the data ");
+          } else {
+            return response.json();
+          }
+        })
+        .then((data) => {
+          setData(data.items);
+          //console.log(data);
+          setLoading(false);
+        });
+    } catch (error) {
+      setError(error.message);
+    }
+  };
 
-useEffect(() => {
-  if (!userInput || error) {
-    setLoading(false);
-  } else {
-    setLoading(true);
-    fetchGitUsers(userInput);
-  }
-}, [userInput, error]);
+  useEffect(() => {
+    if (!userInput || error) {
+      setLoading(false);
+    } else {
+      setLoading(true);
+      fetchGitUsers(userInput);
+    }
+  }, [userInput, error]);
 
   return (
     <Context.Provider
-      value={{ userInput, setUserInput, data, setData, loading, setLoading, error, setError }}
+      value={{
+        userInput,
+        setUserInput,
+        data,
+        setData,
+        loading,
+        setLoading,
+        error,
+        setError,
+      }}
     >
       {/* <pre>{JSON.stringify(data, null, 0)}</pre> */}
       {children}
@@ -48,11 +56,8 @@ useEffect(() => {
   );
 }
 
-
 export const useUser = () => React.useContext(Context);
 export default ContextProvider;
-
-
 
 //-------------------->if I want to do it without async <---------------------//
 //   const api = `https://api.github.com/search/users?q=${userInput}`;
