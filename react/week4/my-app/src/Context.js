@@ -7,7 +7,14 @@ function ContextProvider({ children }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  useEffect(() => {
+    if (!userInput || error) {
+      setLoading(false);
+    } else {
+      setLoading(true);
+      fetchGitUsers(userInput);
+    }
+  }, [userInput, error]);
   const fetchGitUsers = async (input) => {
     try {
       await fetch(`https://api.github.com/search/users?q=${input}`)
@@ -27,15 +34,6 @@ function ContextProvider({ children }) {
       setError(error.message);
     }
   };
-
-  useEffect(() => {
-    if (!userInput || error) {
-      setLoading(false);
-    } else {
-      setLoading(true);
-      fetchGitUsers(userInput);
-    }
-  }, [userInput, error]);
 
   return (
     <Context.Provider
