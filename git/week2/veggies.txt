@@ -1,5 +1,7 @@
 orang
 kiwi
-coconut
+apple
 melon
 banana 
+cucumber 
+tomato
