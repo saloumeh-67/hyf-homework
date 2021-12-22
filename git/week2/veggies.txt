@@ -2,5 +2,4 @@ orang
 kiwi
 lime
 melon
-banana 
-melon
+banana
