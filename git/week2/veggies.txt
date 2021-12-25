@@ -5,3 +5,13 @@ asparagus
 carrot
 tomato
 chili
+orang
+kiwi
+lime
+melon
+banana
+apple
+melon
+banana 
+cucumber 
+tomato
