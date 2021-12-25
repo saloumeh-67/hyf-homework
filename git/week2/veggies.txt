@@ -3,3 +3,8 @@ kiwi
 lime
 melon
 banana
+apple
+melon
+banana 
+cucumber 
+tomato
