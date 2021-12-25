@@ -1,5 +1,8 @@
 orang
 kiwi
+lime
+melon
+banana
 apple
 melon
 banana 
