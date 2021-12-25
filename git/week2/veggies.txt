@@ -1,6 +1,7 @@
 salad
 coriander
-parsley
+potato
 asparagus
 carrot
-
+tomato
+chili
