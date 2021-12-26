@@ -5,3 +5,6 @@ melon
 potato
 salad
 coco
+apple
+melon
+potato
